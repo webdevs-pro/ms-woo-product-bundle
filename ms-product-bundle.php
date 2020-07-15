@@ -86,7 +86,7 @@ add_shortcode('ms_ajax_add_to_cart', function() {
 	$product = new WC_Product_Woosb( $id );
 
 	$bundle = new MSleverWoosb();
-	$bundle->woosb_show_bundled($product);
+	
 
 	$ids = $product->get_ids();
 
@@ -117,7 +117,11 @@ ob_start() //start buffering
 		 
 	});
 </script>
+
+<?php $bundle->woosb_show_bundled($product); ?>
+
 <input name="woosb_ids" id="woosb_ids-<?php echo $id; ?>" class="woosb_ids woosb-ids" type="hidden" value="<?php echo $ids; ?>">
+
 <div class="add_to_cart_item_<?php echo $id; ?> add_to_cart_item">
 	<a  href="?add-to-cart=<?php echo $id; ?>" 
 		 data-quantity="1"   

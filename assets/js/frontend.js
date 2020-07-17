@@ -15,7 +15,10 @@ jQuery(document).ready(function($) {
 
 
 // trigger bundle price calculation after jetsmartfilters ajax loaded
-jQuery(document).on('jet-filter-content-rendered', function($) {
+jQuery(document).on('jet-filter-content-rendered', function($provider,provider,queryId) {
+
+  console.log(queryId.currentQuery);
+
   jQuery('.woosb-wrap').each(function() {
     woosb_init(jQuery(this));
   });

@@ -10,7 +10,17 @@ jQuery(document).ready(function($) {
   $('.woosb-wrap').each(function() {
     woosb_init($(this));
   });
+
 });
+
+
+// trigger bundle price calculation after jetsmartfilters ajax loaded
+jQuery(document).on('jet-filter-content-rendered', function($) {
+  jQuery('.woosb-wrap').each(function() {
+    woosb_init(jQuery(this));
+  });
+});
+
 
 jQuery(document).on('woosq_loaded', function() {
   // product bundles in quick view popup
@@ -212,6 +222,8 @@ function woosb_check_ready($container) {
     $btn.removeClass('woosb-disabled disabled');
   }
 }
+
+
 
 function woosb_calc_price($container) {
   var total = 0;

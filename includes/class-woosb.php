@@ -181,11 +181,11 @@ if ( ! class_exists( 'MSleverWoosb' ) && class_exists( 'WC_Product' ) ) {
 			add_action( 'woocommerce_restore_cart_item', array( $this, 'woosb_restore_cart_item' ), 10, 1 );
 
 			// Add settings link
-			add_filter( 'plugin_action_links_' . plugin_basename( WOOSB_DIR . '/' . basename( WOOSB_FILE ) ), array(
-				$this,
-				'woosb_action_links'
-			), 10, 2 );
-			add_filter( 'plugin_row_meta', array( $this, 'woosb_row_meta' ), 10, 2 );
+			// add_filter( 'plugin_action_links_' . plugin_basename( WOOSB_DIR . '/' . basename( WOOSB_FILE ) ), array(
+			// 	$this,
+			// 	'woosb_action_links'
+			// ), 10, 2 );
+			// add_filter( 'plugin_row_meta', array( $this, 'woosb_row_meta' ), 10, 2 );
 
 			// Loop add-to-cart
 			add_filter( 'woocommerce_loop_add_to_cart_link', array( $this, 'woosb_loop_add_to_cart_link' ), 99, 2 );
@@ -2613,7 +2613,7 @@ if ( ! class_exists( 'MSleverWoosb' ) && class_exists( 'WC_Product' ) ) {
                 </div>
 				<?php
 				if ( ! $product->is_fixed_price() && ( $product->has_variables() || $product->is_optional() ) ) {
-					echo '<div class="woosb-total woosb-text"></div>';
+					echo '<div class="woosb-total woosb-text">' . $product->get_price_html() . '</div>';
 				}
 
 				echo '<div class="woosb-alert woosb-text" style="display: none"></div>';

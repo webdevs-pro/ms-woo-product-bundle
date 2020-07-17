@@ -95,5 +95,5 @@ if ( ! class_exists( 'MSleverMenu' ) ) {
 		}
 	}
 
-	new MSleverMenu();
+	// new MSleverMenu();
 }

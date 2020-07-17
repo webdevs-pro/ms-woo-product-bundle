@@ -61,5 +61,5 @@ if ( ! class_exists( 'MSleverDashboard' ) ) {
 		}
 	}
 
-	new MSleverDashboard();
+	// new MSleverDashboard();
 }

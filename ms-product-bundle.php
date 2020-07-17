@@ -3,7 +3,7 @@
 Plugin Name: MS Product Bundles for WooCommerce
 Plugin URI: https://www.magnific-soft.com/
 Description: MS Product Bundles is a plugin help you bundle a few products, offer them at a discount and watch the sales go up!
-Version: 1.0
+Version: 1.1
 Author: Magnific Soft
 Author URI: https://www.magnific-soft.com/
 Text Domain: woo-product-bundle

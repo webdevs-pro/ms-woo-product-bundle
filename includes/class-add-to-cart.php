@@ -36,7 +36,8 @@ class MSwpbpAddon {
       <div class="mswpb_woosb_addon">
 
          <style>
-            .mswpb_woosb_addon form.cart {
+            .mswpb_woosb_addon form.cart,
+            .mswpb_woosb_addon .woosb-qty {
                display: none;
             }
          </style>

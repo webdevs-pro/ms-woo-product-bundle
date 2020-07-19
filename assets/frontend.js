@@ -3,13 +3,16 @@
 // trigger bundle price calculation after jetsmartfilters ajax loaded
 jQuery(document).on('jet-filter-content-rendered', function($provider,provider,queryId) {
 
-  console.log(queryId.currentQuery);
+  // jet-smart-filters ajax filter fix
+  jQuery.getScript("/wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart-variation.min.js");
+  jQuery.getScript("/wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart-variation.js");
 
+  // jet-smart-filters ajax woosb fix
   jQuery('.woosb-wrap').each(function() {
     woosb_init(jQuery(this));
   });
+  
 });
-
 
 
 

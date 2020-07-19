@@ -3,7 +3,7 @@
 Plugin Name: MS WPC PBfW addon
 Plugin URI: https://www.magnific-soft.com/
 Description: This is addon for WPC Product Bundles for WooCommerce
-Version: 1.3
+Version: 1.4
 Author: Magnific Soft
 Author URI: https://www.magnific-soft.com/
 Text Domain: woo-product-bundle

@@ -1,6 +1,10 @@
 MS Product Bundles for WooCommerce
 ====================================
 
+1.4
+-----
+- jet-smart-filters ajax reload fix
+
 1.3
 -----
 - Plugin rewrited for WPC Product Bundles for WooCommerce premium

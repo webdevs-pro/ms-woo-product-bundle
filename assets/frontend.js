@@ -40,8 +40,6 @@ jQuery(document).ready(function($){
 
     var ids = $('#woosb_ids-' + product_id).val();
 
-    console.log(product_id);
-
     $('.add_to_cart_item_' + product_id + ' a').attr('data-woosb_ids', ids);
 
     if($('.add_to_cart_item_' + product_id + ' a').attr('data-woosb_ids') == "") {

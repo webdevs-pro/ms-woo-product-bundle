@@ -34,6 +34,12 @@ class MSwpbpAddon {
       
 		?>
       <div class="mswpb_woosb_addon">
+
+         <style>
+            .mswpb_woosb_addon form.cart {
+               display: none;
+            }
+         </style>
       
          <?php echo do_shortcode('[woosb_form]'); ?>
 
@@ -74,7 +80,6 @@ class MSwpbpAddon {
 
    function mswpb_wp_enqueue_scripts() {
       wp_enqueue_script( 'wmswpb-frontend', MSWPB_URI . 'assets/frontend.js', array( 'jquery' ), '', true );
-      wp_enqueue_style( 'woosb-frontend', MSWPB_URI . 'assets/frontend.css' );
    }
    
 }

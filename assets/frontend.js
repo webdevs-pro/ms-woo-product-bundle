@@ -3,15 +3,23 @@
 // trigger bundle price calculation after jetsmartfilters ajax loaded
 jQuery(document).on('jet-filter-content-rendered', function($provider,provider,queryId) {
 
+// detect add to cart button class changes after jetsmartfilters ajax loaded
+  // mut.observe(document.querySelector(".mswpb_woosb_addon button.single_add_to_cart_button"),{
+  //   'attributes': true
+  // });
+
   // jet-smart-filters ajax filter fix
   jQuery.getScript("/wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart-variation.min.js");
   jQuery.getScript("/wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart-variation.js");
+
+  jQuery.getScript("/wp-content/plugins/woo-ajax-add-to-cart/assets/woo-ajax-add-to-cart.min.js");
+
 
   // jet-smart-filters ajax woosb fix
   jQuery('.woosb-wrap').each(function() {
     woosb_init(jQuery(this));
   });
-  
+
 });
 
 
@@ -60,17 +68,17 @@ jQuery(document).ready(function($){
 
 
 // detect add to cart button class changes
-var mut = new MutationObserver(function(mutations, mut){
-  mutations.forEach(function (mutation) {
-    if (mutation.attributeName === "class") {
-        if(jQuery(mutation.target).hasClass('disabled')) {
-          jQuery(mutation.target).closest('.mswpb_woosb_addon').find('.add_to_cart_button.ajax_add_to_cart').addClass('disabled');
-        } else {
-          jQuery(mutation.target).closest('.mswpb_woosb_addon').find('.add_to_cart_button.ajax_add_to_cart').removeClass('disabled');
-        }
-    }
-  });
-});
-mut.observe(document.querySelector(".mswpb_woosb_addon .single_add_to_cart_button"),{
-  'attributes': true
-});
+// var mut = new MutationObserver(function(mutations, mut){
+//   mutations.forEach(function (mutation) {
+//     if (mutation.attributeName === "class") {
+//         if(jQuery(mutation.target).hasClass('disabled')) {
+//           jQuery(mutation.target).closest('.mswpb_woosb_addon').find('.add_to_cart_button.ajax_add_to_cart').addClass('disabled');
+//         } else {
+//           jQuery(mutation.target).closest('.mswpb_woosb_addon').find('.add_to_cart_button.ajax_add_to_cart').removeClass('disabled');
+//         }
+//     }
+//   });
+// });
+// mut.observe(document.querySelector(".mswpb_woosb_addon button.single_add_to_cart_button"),{
+//   'attributes': true
+// });

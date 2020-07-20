@@ -1,6 +1,10 @@
 MS Product Bundles for WooCommerce
 ====================================
 
+1.6
+-----
+- fix Ajax add to cart for WooCommerce script loading
+
 1.5
 -----
 - Plugin rewrited for WPC Product Bundles for WooCommerce premium and Ajax add to cart for WooCommerce

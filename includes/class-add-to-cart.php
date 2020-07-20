@@ -36,3 +36,21 @@ class MSwpbpAddon {
    }
    
 }
+
+
+// class MSwpbpADTC extends QLWCAJAX {
+
+//    function add_product_js() {
+
+//       echo "BOOM";
+
+//       // wp_register_script('woo-ajax-add-to-cart', plugin_dir_url(__FILE__) . 'assets/woo-ajax-add-to-cart.min.js', array('jquery', 'wc-add-to-cart'), QLWCAJAX_PLUGIN_VERSION, true);
+//       wp_register_script('woo-ajax-add-to-cart', plugin_dir_url(__FILE__) . 'assets/woo-ajax-add-to-cart.js', array('jquery', 'wc-add-to-cart'), QLWCAJAX_PLUGIN_VERSION, true);
+
+
+//       // if (function_exists('is_product') && (is_product() || is_page())) {
+//         wp_enqueue_script('woo-ajax-add-to-cart');
+//       // }
+//     }
+   
+// }

@@ -3,7 +3,7 @@
 Plugin Name: MS WPC PBfW addon
 Plugin URI: https://www.magnific-soft.com/
 Description: This is addon for WPC Product Bundles for WooCommerce
-Version: 1.5
+Version: 1.6
 Author: Magnific Soft
 Author URI: https://www.magnific-soft.com/
 Text Domain: woo-product-bundle
@@ -15,12 +15,18 @@ WC tested up to: 4.2.2
 */
 
 defined( 'ABSPATH' ) || exit;
-
-
-
-
 define( 'MSWPB_URI', plugin_dir_url( __FILE__ ) );
 
+add_action( 'plugins_loaded', function() {
+	include_once 'includes/class-add-to-cart.php';
+	MSwpbpAddon::instance();
+}, 200, 20 );
+
+add_action('wp_enqueue_scripts', function() {
+	if (function_exists('is_product') && (is_product() || is_page())) {
+		wp_enqueue_script('woo-ajax-add-to-cart');
+	}
+}, 200);
 
 
 
@@ -32,32 +38,3 @@ $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
 	'ms-woo-product-bundle'
 );
 
-
-
-if ( ! function_exists( 'mswpbpaddon_init' ) ) {
-	add_action( 'plugins_loaded', 'mswpbpaddon_init', 200, 20 );
-
-	function mswpbpaddon_init() {
-
-
-		// if ( ! function_exists( 'WC' ) || ! version_compare( WC()->version, '3.0.0', '>=' ) ) {
-		// 	return;
-		// }
-
-		include_once 'includes/class-add-to-cart.php';
-
-
-		// start
-		MSwpbpAddon::instance();
-
-	}
-}
-
-
-
-
-
-
-
-
-// $pluginExample = new PluginExample();

@@ -1,6 +1,11 @@
 MS Product Bundles for WooCommerce
 ====================================
 
+1.7
+-----
+- quantity allways visible
+- allow more than 3 attributeі in variable product type
+
 1.6
 -----
 - fix Ajax add to cart for WooCommerce script loading

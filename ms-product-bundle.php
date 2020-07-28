@@ -3,7 +3,7 @@
 Plugin Name: MS WPC PBfW addon
 Plugin URI: https://www.magnific-soft.com/
 Description: This is addon for WPC Product Bundles for WooCommerce
-Version: 1.7
+Version: 1.8
 Author: Magnific Soft
 Author URI: https://www.magnific-soft.com/
 Text Domain: woo-product-bundle
@@ -58,4 +58,15 @@ add_filter('woosb_item_name', function($name, $_product, $product, $count){
 add_action( 'woocommerce_update_product', 'ms_product_save', 10, 1 );
 function ms_product_save( $product_id ) {
 	  update_post_meta( $product_id, 'woosb_optional_products', 'on' );
+}
+
+
+// hide unnecessary checkboxes on bundled product screen
+add_action('admin_head', 'ms_custom_admin_styles');
+function ms_custom_admin_styles() {
+  echo '<style>
+  	.woosb_tr_space:not(:nth-child(1)):not(:nth-child(2)):not(:nth-child(3)) {
+		display: none !important;
+	}
+  </style>';
 }

@@ -1,6 +1,10 @@
 MS Product Bundles for WooCommerce
 ====================================
 
+1.8
+-----
+- hide unnecessary checkboxes on bundled product screen
+
 1.7
 -----
 - quantity allways visible
